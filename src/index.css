@@ -17,14 +17,22 @@
   justify-content: center;
 }
 
-.foodItems{
-  cursor: pointer;
-  margin: 1.4em;
+.foodArea {
+  display: flex;
+  justify-content: center;
+  gap: 0.8em;
 }
 
-.foodItems:hover{
-  opacity: 70%;
-  transition: 0.2s;
+.foodItems {
+  cursor: pointer;
+  margin: 0;
+  width: 8rem;
+  height: auto;
+  transition: opacity 0.2s;
+}
+
+.foodItems:hover {
+  opacity: 0.7;
 }
 
 a {

@@ -30,7 +30,6 @@ export default function App() {
     <>
       <h1>หมูเด้งเกมส์</h1>
       <h3>Level {level}</h3>
-      <div>
         <img
           src={level >= 100 ? minepigImg : pigdengImg}
           alt={level >= 100 ? "หมูอ้วน" : "หมูเด้ง"}
@@ -42,9 +41,9 @@ export default function App() {
           }}
         />
         <MaxLevel level={level} />
-      </div>
       <h2>ให้อาหารหมูเด้งสิ</h2>
       <p>คลิ๊กที่อาหารเพื่อเพิ่ม level ของหมูเด้ง</p>
+      <div className='foodArea'>
       <img
         className='foodItems'
         src={watermelonImg}
@@ -66,6 +65,7 @@ export default function App() {
         onClick={() => increaseLevel(15)}
         style={{ cursor: 'pointer' }}
       />
+      </div>
       <div>
         <button onClick={() => {
           setLevel(0);
