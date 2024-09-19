@@ -1,4 +1,9 @@
 import { useState } from 'react';
+import watermelonImg from './imgs/watermelon.png';
+import pumkinImg from './imgs/pumkin.png';
+import grassImg from './imgs/grass.png';
+import minepigImg from './imgs/minepig.jpeg';
+import pigdengImg from './imgs/pigdeng.jpg';
 
 function MaxLevel({ level }) {
   if (level >= 100) {
@@ -27,7 +32,7 @@ export default function App() {
       <h3>Level {level}</h3>
       <div>
         <img
-          src={level >= 100 ? "/imgs/minepig.jpeg" : "/imgs/pigdeng.jpg"}
+          src={level >= 100 ? "src/imgs/minepig.jpeg" : "src/imgs/pigdeng.jpg"}
           alt={level >= 100 ? "หมูอ้วน" : "หมูเด้ง"}
           id="pigdeng"
           style={{
@@ -42,21 +47,21 @@ export default function App() {
       <p>คลิ๊กที่อาหารเพื่อเพิ่ม level ของหมูเด้ง</p>
       <img
         className='foodItems'
-        src="/imgs/watermelon.png"
+        src="src/imgs/watermelon.png"
         alt="แตงโม"
         onClick={() => increaseLevel(5)}
         style={{ cursor: 'pointer' }}
       />
       <img
         className='foodItems'
-        src="/imgs/pumkin.png"
+        src="src/imgs/pumkin.png"
         alt="ฟักทอง"
         onClick={() => increaseLevel(10)}
         style={{ cursor: 'pointer' }}
       />
       <img
         className='foodItems'
-        src="/imgs/grass.png"
+        src="src/imgs/grass.png"
         alt="หญ้า"
         onClick={() => increaseLevel(15)}
         style={{ cursor: 'pointer' }}
